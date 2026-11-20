@@ -1,0 +1,45 @@
+# EvoSkill config for the OS AI Field Notes formatting skill.
+# Edit with a code editor or nano, not TextEdit (TextEdit swaps in curly quotes and breaks this file).
+
+[harness]
+name = "claude"
+model = "sonnet"
+data_dirs = []
+timeout_seconds = 1200
+max_retries = 3
+
+[evolution]
+mode = "skill_only"
+iterations = 6
+frontier_size = 3
+concurrency = 4
+no_improvement_limit = 3
+failure_samples = 3
+
+[dataset]
+source = "csv"
+# Kept outside the project folder so the agent can't open the answer key during the run.
+path = "/ABSOLUTE/PATH/TO/fieldnotes.csv"
+question_column = "question"
+ground_truth_column = "ground_truth"
+category_column = "category"
+# The defaults (0.18 / 0.12) would leave 70% of the items unused.
+train_ratio = 0.6
+val_ratio = 0.4
+
+[scorer]
+type = "llm"
+model = "claude-sonnet-4-6"
+rubric = """You are grading one newsletter item. Check each point below briefly, then give the score.
+
+Expected is the item as it was published in the OS AI Field Notes newsletter. Got is a new attempt written from the same source material (the Question). Expected is a quality bar, not wording to copy: different wording that is just as good loses nothing.
+
+Start from 1.0 and subtract:
+- 0.1 if Got does not start with the item name in bold ALL CAPS with the colon inside the bold (**NAME:**), or uses a name people would not recognize (the product if that is what people call it, otherwise the company or the news itself).
+- 0.1 if the length is off: news items 2 to 3 sentences and about 40 to 65 words, podcast items about 40 to 60 words; What's New at Sentient items can be shorter.
+- 0.2 if any link from the Question is missing or not written as [[label](url)] with the right label: huggingface, github, paper, blog, docs or youtube where they fit, ref for X posts and news articles, ref2 and ref3 for extra refs, SUBMIT, SURVEY or RSVP for Sentient calls to action.
+- 0.1 if it does not end with the news date as [D MON YYYY] with no leading zero, matching Expected whenever the Question shows the date.
+- Up to 0.5 for content: key facts from Expected that are missing, any fact or number not in the Question, or a weaker lead than Expected.
+If Expected and Got are both entirely lowercase, they were lowercased before grading: ignore capitalization.
+
+End with a final line in exactly this form: SCORE: 0.7"""
