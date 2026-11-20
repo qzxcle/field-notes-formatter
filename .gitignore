@@ -1,0 +1,11 @@
+# Secrets and local settings
+.env
+*.env
+# EvoSkill run leftovers (contain copied source text)
+.cache/
+.evoskill/feedback_history.md
+fieldnotes.csv
+# System files
+.DS_Store
+__pycache__/
+*.pyc
