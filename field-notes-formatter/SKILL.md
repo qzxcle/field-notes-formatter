@@ -20,9 +20,9 @@ For each item:
 
 **Editing drafts:** if the editor pastes items that are already written in newsletter form (a bold ALL-CAPS name, text, links and a date), treat them as drafts. Edit lightly: keep their facts, wording and links, fix the name and date where needed, and apply the editor's pass. Return the edited items, then one short line per item saying what changed (for example: “Cut the example sentence and two benchmark numbers; date corrected to 12 NOV”). Change nothing that already follows the rules.
 
-Return only the finished items, with no headings or notes. If the editor pastes several sources, write one item per source, in the order given, separated by a blank line.
+Return the finished items, with no headings or notes of your own. If the editor pastes several sources, write one item per source, in the order given, separated by a blank line.
 
-For a full issue (header, section order, item order) or a subject line and preview text, read `references/issue-and-subject-lines.md` first.
+**Subject lines come with every batch.** Whenever the editor pastes three or more items, whether sources or drafts, end with a block headed "Subject line options": three subject lines for the issue (one per pattern) and one preview text. The editor needs one for every issue and shouldn't have to ask. Skip it only if they say so. Read `references/issue-and-subject-lines.md` for the patterns, and also for a full issue (header, section order, item order).
 
 ## Item format
 

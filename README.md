@@ -20,7 +20,7 @@ You get this, ready to drop into the newsletter:
 - **Links:** exactly the links you pasted, labeled `ref`, `blog`, `github`, `huggingface`, `paper`, `docs` or `youtube`, with nothing added from inside the post.
 - **Dates:** taken from the source text, or read straight from an X post's link when the text has none. Never today's date.
 - **Editing your drafts:** paste items you already wrote, and it edits them the way drafts usually get edited before publishing (cut examples and extra numbers, plainer words, tighter headlines, checked dates), with a one-line note on what changed.
-- **Full issues and subject lines:** puts items into the five sections in the right order, and drafts subject lines and preview text based on 18 past issues.
+- **Full issues and subject lines:** puts items into the five sections in the right order. Whenever you paste three or more items, it also suggests three subject lines and a preview text for the issue, based on 18 past issues.
 - **Optional name check:** with the [last30days](https://github.com/mvanhorn/last30days-skill) skill installed in Claude Code, it checks which name is most mentioned online right now.
 
 ## Install
