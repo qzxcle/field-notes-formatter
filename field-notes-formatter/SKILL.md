@@ -1,6 +1,6 @@
 ---
 name: field-notes-formatter
-description: Format news items for OS AI Field Notes, Sentient Foundation's weekly open-source AI newsletter. Use this whenever the user pastes a link plus copied post, article or podcast transcript and wants it turned into a newsletter item, a Field Notes entry or "a paragraph for the newsletter", or says "format this", "write this up" or "make an item", even if they don't mention Field Notes by name. Also use it to assemble a full issue in the right section order and to write the issue's subject line and preview text.
+description: Format news items for OS AI Field Notes, Sentient Foundation's weekly open-source AI newsletter. Use this whenever the user pastes a link plus copied post, article or podcast transcript and wants it turned into a newsletter item, a Field Notes entry or "a paragraph for the newsletter", or says "format this", "write this up" or "make an item", even if they don't mention Field Notes by name. Also use it to assemble a full issue in the right section order, to write the issue's subject line and preview text, and to edit draft items the editor already wrote into publish-ready form.
 ---
 
 # Field Notes Formatter
@@ -15,7 +15,10 @@ For each item:
 2. **Pick the headline name** (see Naming). In Claude Code with last30days installed, run the name check for model and tool items where the name could go either way.
 3. **Find the date** (see Date).
 4. **Write the body** for the item's type (see Body).
-5. **Add the links and the date**, then run the final check.
+5. **Add the links and the date.**
+6. **Run the editor's pass** (see below), then the final check.
+
+**Editing drafts:** if the editor pastes items that are already written in newsletter form (a bold ALL-CAPS name, text, links and a date), treat them as drafts. Keep their facts and links, fix the name and date where needed, and apply the editor's pass. Return the edited items, then one short line per item saying what changed (for example: “Cut the example sentence and two benchmark numbers; date corrected to 12 NOV”). Change nothing that already follows the rules.
 
 Return only the finished items, with no headings or notes. If the editor pastes several sources, write one item per source, in the order given, separated by a blank line.
 
@@ -82,6 +85,18 @@ Use the date of the news, not the issue date, and never today's date. Defaulting
 3. Otherwise, write the placeholder `[D MON YYYY]` so the editor fills it in.
 
 Format: no leading zero and the month in caps, `[9 OCT 2026]`, `[16 NOV 2026]`. Events can use a range: `[29-30 SEP 2026]`.
+
+## Editor's pass
+
+These are the changes the editor made most often when turning 93 drafts into published items. Drafts ran a median of 60 words and published items 55, so expect to cut.
+
+1. **Cut examples and asides.** Sentences like “For example, simulate Jenga for each move” go.
+2. **Keep only the numbers that carry the story.** From a list of benchmark scores, keep the one or two that support the main claim. Shorten long lists of models or partners to the best-known few plus “and more”.
+3. **Leave out engagement stats and inline dates.** Hacker News points, Reddit upvotes, GitHub stars and comment counts never made it into a published item. Dates like “on June 3” come out of the text, because the date goes at the end.
+4. **Say what it is in the first sentence.** If the description of the product comes late, move it up. Give a lesser-known organization a short descriptor (“RadixArk, founded by AI infrastructure veterans from xAI and NVIDIA”).
+5. **Use plain words.** “See”, not “visualize”. “Act”, not “commit to an action”. “4.7x cheaper”, not “4.7 times less”. “Ranks 3rd”, not “places third of 33”. Spell out abbreviations readers may not know (“Amazon Web Services”, not “AWS”).
+6. **Tighten the headline.** Podcasts get the episode hook or guest (THE ALL-IN PODCAST, COREWEAVE CRASH). Spell out abbreviations (SUPER INTELLIGENCE VS ARTIFICIAL INTELLIGENCE SAGA, not SI VS AI SAGA). Drop words that repeat the obvious (EUROPA, not EUROPA AI). Join two companies with “&” (HUGGING FACE & OPENROUTER).
+7. **Check the date.** Drafts were often a day off. For X links, confirm the date with the script.
 
 ## Final check
 

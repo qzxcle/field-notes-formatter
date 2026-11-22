@@ -25,3 +25,9 @@ Headline naming changed more than anything else. It went from company names in t
 ## Subject lines
 
 Past subjects run 29–78 characters, with a median of 54, and follow three patterns: the week's big theme for open-source AI, one striking number, or the biggest story as a question. The preview text was "Brought to you by Sentient Foundation" until the 20 November issue, which listed its three lead stories instead. Both are written up for the skill in `field-notes-formatter/references/issue-and-subject-lines.md`.
+
+## What editing changes
+
+Comparing 93 draft items from 10 issues with their published versions shows what the editing pass does. 77 of 93 items were edited, 53 of them heavily. Items got shorter, from a median of 60 words to 55: 51 got shorter, and only 4 got longer. 28 headlines changed, and 20 dates were corrected, mostly by one day.
+
+The most common edits: cutting example sentences, keeping only the one or two benchmark numbers that carry the story, removing engagement stats (Hacker News points and Reddit upvotes never survived) and inline dates, moving "what it is" into the first sentence, giving lesser-known organizations a short descriptor, and choosing plainer words. These became the skill's editor's pass.
