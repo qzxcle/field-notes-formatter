@@ -27,7 +27,7 @@ You get this, ready to drop into the newsletter:
 ### Claude Code
 
 ```
-git clone https://github.com/YOUR-USERNAME/field-notes-formatter.git
+git clone https://github.com/qzxcle/field-notes-formatter.git
 mkdir -p ~/.claude/skills
 cp -r field-notes-formatter/field-notes-formatter ~/.claude/skills/
 ```
