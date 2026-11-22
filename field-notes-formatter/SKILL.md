@@ -1,6 +1,6 @@
 ---
 name: field-notes-formatter
-description: Format news items for OS AI Field Notes, Sentient Foundation's weekly open-source AI newsletter. Use this whenever the user pastes a link plus copied post, article or podcast transcript and wants it turned into a newsletter item, a Field Notes entry or "a paragraph for the newsletter", or says "format this", "write this up" or "make an item", even if they don't mention Field Notes by name.
+description: Format news items for OS AI Field Notes, Sentient Foundation's weekly open-source AI newsletter. Use this whenever the user pastes a link plus copied post, article or podcast transcript and wants it turned into a newsletter item, a Field Notes entry or "a paragraph for the newsletter", or says "format this", "write this up" or "make an item", even if they don't mention Field Notes by name. Also use it to assemble a full issue in the right section order and to write the issue's subject line and preview text.
 ---
 
 # Field Notes Formatter
@@ -18,6 +18,8 @@ For each item:
 5. **Add the links and the date**, then run the final check.
 
 Return only the finished items, with no headings or notes. If the editor pastes several sources, write one item per source, in the order given, separated by a blank line.
+
+For a full issue (header, section order, item order) or a subject line and preview text, read `references/issue-and-subject-lines.md` first.
 
 ## Item format
 
@@ -43,7 +45,7 @@ The editor wants the name that is most mentioned online right now, and the sourc
 
 ## Body
 
-Use only facts and numbers from the pasted text, never invent any, and keep names, numbers, rankings and comparisons exactly as the source states them (#1, 4.7x cheaper, $0.26 per task). Keep the tone neutral and factual, with no hype words.
+Use only facts and numbers from the pasted text, never invent any, and keep names, numbers, rankings and comparisons exactly as the source states them (#1, 4.7x cheaper, $0.26 per task). Keep the tone neutral and factual, with no hype words. Use plain verbs: released, launched, open-sourced, announced. Casual verbs like “drops” appeared only in the newsletter's first issues.
 
 **News items** (models, tools, policy): 2–3 sentences, about 40–65 words.
 - Open with who did what: “[Who] released / launched / open-sourced / announced [name], a [what it is].” Give lesser-known organizations a short descriptor (“Sequoia-backed startup Unreal Labs”).
@@ -67,8 +69,9 @@ Labels:
 - `huggingface`, `github`, `paper` (arXiv), `youtube` (podcast and video episodes)
 - `docs` only for real technical documentation
 - `blog` only for an official company or product blog or announcement page
-- `ref` for X posts, news articles, Substack and newsletters, personal sites (darioamodei.com is `ref`, not `blog`) and anything else; number extra ones `ref2`, `ref3`
-- `SUBMIT`, `SURVEY` or `RSVP` for Sentient calls to action
+- `ref` for X posts, news articles, Substack and newsletters, personal sites (darioamodei.com is `ref`, not `blog`) and anything else
+- Number repeats of any label: `ref2`, `ref3`, `github2`
+- Sentient calls to action in caps: `SUBMIT`, `SURVEY`, `RSVP`, `APPLY` or `JOIN`
 
 ## Date
 
@@ -89,6 +92,8 @@ Format: no leading zero and the month in caps, `[9 OCT 2026]`, `[16 NOV 2026]`. 
 - Every number appears in the source.
 
 ## Examples
+
+More examples, two or three per section, are in `references/examples.md`.
 
 Model release:
 

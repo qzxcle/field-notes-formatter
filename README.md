@@ -19,6 +19,7 @@ You get this, ready to drop into the newsletter:
 - **Naming:** the name people actually use (product, company or the news itself), family names for model families, and the right patterns for podcasts and Sentient items.
 - **Links:** exactly the links you pasted, labeled `ref`, `blog`, `github`, `huggingface`, `paper`, `docs` or `youtube`, with nothing added from inside the post.
 - **Dates:** taken from the source text, or read straight from an X post's link when the text has none. Never today's date.
+- **Full issues and subject lines:** puts items into the five sections in the right order, and drafts subject lines and preview text based on 18 past issues.
 - **Optional name check:** with the [last30days](https://github.com/mvanhorn/last30days-skill) skill installed in Claude Code, it checks which name is most mentioned online right now.
 
 ## Install
@@ -59,16 +60,19 @@ The first time, Claude Code asks for permission to run the date script (and last
 | `field-notes-formatter/` | The skill. This folder is what you install. |
 | `field-notes-formatter/SKILL.md` | The instructions Claude follows: format, naming, links, dates, lengths, examples. |
 | `field-notes-formatter/scripts/x_date.py` | Reads the publish date from an X post's link. |
+| `field-notes-formatter/references/` | Loaded only when needed: more examples by section, the issue structure, and subject-line patterns. |
 | `field-notes-formatter.skill` | The same skill packaged for upload in claude.ai. |
-| `training/` | How the skill was built with EvoSkill, for anyone who wants to retrain it. See `training/RESULTS.md`. |
+| `training/` | How the skill was built: the EvoSkill run (`RESULTS.md`), the style analysis of 18 issues (`STYLE_ANALYSIS.md`), and the archive of 238 published items (`published_items.csv`). |
 
 ## How it was built
 
 The skill started from rules written out of three published issues, then went through a 6-round [EvoSkill](https://github.com/sentient-agi/EvoSkill) training run. No automatically written skill beat the hand-written rules, but the run exposed the mistakes the agent kept making (dates, extra links, naming), and the final skill fixes exactly those. The full story, scores and costs are in [`training/RESULTS.md`](training/RESULTS.md).
 
+Later, all 18 issues published between March and November 2026 were analyzed to confirm the rules (lengths, verbs, dates, link labels, item order) and to add issue assembly and subject lines. See [`training/STYLE_ANALYSIS.md`](training/STYLE_ANALYSIS.md).
+
 ## Credits
 
-The training examples are items published in OS AI Field Notes by Sentient Foundation. Every source behind them is credited by its link in [`training/fieldnotes_public.csv`](training/fieldnotes_public.csv).
+The training examples are items published in OS AI Field Notes by Sentient Foundation. Every source behind them is credited by its link in [`training/fieldnotes_public.csv`](training/fieldnotes_public.csv). `training/published_items.csv` holds the newsletter's own published items, as they appeared in each issue.
 
 ## Changing the skill
 
