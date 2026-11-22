@@ -69,7 +69,7 @@ The first time, Claude Code asks for permission to run the date script (and last
 
 The skill started from rules written out of three published issues, then went through a 6-round [EvoSkill](https://github.com/sentient-agi/EvoSkill) training run. No automatically written skill beat the hand-written rules, but the run exposed the mistakes the agent kept making (dates, extra links, naming), and the final skill fixes exactly those. The full story, scores and costs are in [`training/RESULTS.md`](training/RESULTS.md).
 
-Later, all 18 issues published between March and November 2026 were analyzed to confirm the rules (lengths, verbs, dates, link labels, item order) and to add issue assembly and subject lines. See [`training/STYLE_ANALYSIS.md`](training/STYLE_ANALYSIS.md).
+A second EvoSkill run trained on 93 drafts and their published versions. It raised the editing score from 62.1% to 68.6% by teaching restraint: the hand-written rules cut too much, and the evolved rules decide what to keep. Later, all 18 issues published between March and November 2026 were analyzed to confirm the rules (lengths, verbs, dates, link labels, item order) and to add issue assembly and subject lines. See [`training/STYLE_ANALYSIS.md`](training/STYLE_ANALYSIS.md).
 
 ## Credits
 

@@ -49,3 +49,30 @@ About $45 in API usage in total, including two false starts caused by the judge 
 
 - **Test the judge before the run.** A 30-second, few-cent test would have caught the judge bug before it cost money.
 - **A strong hand-written baseline is hard to beat.** When your rules already score around 80%, EvoSkill is most useful as a diagnostic: read its notes (`.evoskill/feedback_history.md`) for the mistakes it keeps finding, and fix those by hand.
+
+# Second run: learning how drafts get edited
+
+## Setup
+
+- **Data:** 93 pairs of a draft item and the version that was published, from 10 issues (June to November 2026). The drafts are internal working documents, so this dataset stays private.
+- **Starting point:** the editing rules written by hand from the drafts: cut examples and engagement stats, trim extra numbers, plain words, tighter headlines, checked dates.
+- **Split:** 35 items held back for scoring, more than twice as many as the first run, for steadier scores.
+- **Run:** 4 rounds, about $47 in total.
+
+## Results
+
+| Round | Score | Outcome |
+| --- | --- | --- |
+| Baseline | 62.1% | Hand-written editing rules only |
+| 1 | 64.9% | New best |
+| 2 | 64.6% | Kept as a backup |
+| 3 | **68.6%** | **Best** |
+| 4 | 66.7% | Kept as a backup |
+
+This time every version EvoSkill wrote beat the baseline, a gain of 6.4 points for the best.
+
+## What it learned
+
+The hand-written rules made the agent over-edit. It cut details that carried the story and rewrote wording the editor would have kept. The winning skill's core idea is "earn every cut": keeping is the default, and only true asides, raw engagement counts and inline dates get cut. It also learned to keep comparisons that give a number meaning, price chains, lists that are part of a claim, named things, design intent and rankings, to leave the draft's wording alone unless it's unclear, and to keep the headline choices a draft already makes.
+
+The final skill combines both halves: the hand-written rules for what to change, and the evolved rules for what to keep.

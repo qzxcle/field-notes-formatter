@@ -18,7 +18,7 @@ For each item:
 5. **Add the links and the date.**
 6. **Run the editor's pass** (see below), then the final check.
 
-**Editing drafts:** if the editor pastes items that are already written in newsletter form (a bold ALL-CAPS name, text, links and a date), treat them as drafts. Keep their facts and links, fix the name and date where needed, and apply the editor's pass. Return the edited items, then one short line per item saying what changed (for example: “Cut the example sentence and two benchmark numbers; date corrected to 12 NOV”). Change nothing that already follows the rules.
+**Editing drafts:** if the editor pastes items that are already written in newsletter form (a bold ALL-CAPS name, text, links and a date), treat them as drafts. Edit lightly: keep their facts, wording and links, fix the name and date where needed, and apply the editor's pass. Return the edited items, then one short line per item saying what changed (for example: “Cut the example sentence and two benchmark numbers; date corrected to 12 NOV”). Change nothing that already follows the rules.
 
 Return only the finished items, with no headings or notes. If the editor pastes several sources, write one item per source, in the order given, separated by a blank line.
 
@@ -88,15 +88,36 @@ Format: no leading zero and the month in caps, `[9 OCT 2026]`, `[16 NOV 2026]`. 
 
 ## Editor's pass
 
-These are the changes the editor made most often when turning 93 drafts into published items. Drafts ran a median of 60 words and published items 55, so expect to cut.
+Run this on every item, whether you wrote it from sources or you're editing a draft. It has two halves, and both matter. Tested on 93 real drafts, the cutting rules alone made Claude over-edit and matched the published versions 62% of the time. Adding the second half, "earn every cut", raised that to 69%. The editor's real edits are small and targeted (drafts averaged 60 words, published items 55), not rewrites.
+
+### What to change
 
 1. **Cut examples and asides.** Sentences like “For example, simulate Jenga for each move” go.
-2. **Keep only the numbers that carry the story.** From a list of benchmark scores, keep the one or two that support the main claim. Shorten long lists of models or partners to the best-known few plus “and more”.
-3. **Leave out engagement stats and inline dates.** Hacker News points, Reddit upvotes, GitHub stars and comment counts never made it into a published item. Dates like “on June 3” come out of the text, because the date goes at the end.
+2. **Cut raw engagement counts and inline dates.** Hacker News points, Reddit upvotes and “14k GitHub stars” never made it into a published item. Dates like “on June 3” come out of the text, because the date goes at the end.
+3. **Trim repetition.** When several benchmark scores make the same point, keep the one that carries the claim, plus the competitor it's compared to. Shorten long lists of places or generic partners (“partners from France, Germany, the UK and Spain” becomes “European partners”).
 4. **Say what it is in the first sentence.** If the description of the product comes late, move it up. Give a lesser-known organization a short descriptor (“RadixArk, founded by AI infrastructure veterans from xAI and NVIDIA”).
-5. **Use plain words.** “See”, not “visualize”. “Act”, not “commit to an action”. “4.7x cheaper”, not “4.7 times less”. “Ranks 3rd”, not “places third of 33”. Spell out abbreviations readers may not know (“Amazon Web Services”, not “AWS”).
-6. **Tighten the headline.** Podcasts get the episode hook or guest (THE ALL-IN PODCAST, COREWEAVE CRASH). Spell out abbreviations (SUPER INTELLIGENCE VS ARTIFICIAL INTELLIGENCE SAGA, not SI VS AI SAGA). Drop words that repeat the obvious (EUROPA, not EUROPA AI). Join two companies with “&” (HUGGING FACE & OPENROUTER).
+5. **Use plain words where the draft's word is jargon or awkward.** “See”, not “visualize”. “Act”, not “commit to an action”. Spell out abbreviations readers may not know (“Amazon Web Services”, not “AWS”).
+6. **Fix the headline where it breaks a rule.** Give a bare podcast name its episode hook or guest. Spell out abbreviations (SUPER INTELLIGENCE VS ARTIFICIAL INTELLIGENCE SAGA, not SI VS AI SAGA). Drop words that repeat the obvious (EUROPA, not EUROPA AI). Join two partner companies with “&” (HUGGING FACE & OPENROUTER).
 7. **Check the date.** Drafts were often a day off. For X links, confirm the date with the script.
+
+### Earn every cut
+
+Keeping is the default. Cut only what rules 1–3 clearly name. These details carry the story, so keep them even when they look like extras:
+
+- **Comparisons that give a number meaning:** “level with Grok 4.7, ahead of Kimi K3 at 44”.
+- **Price chains:** “$0.435 per 1M input tokens, working out to $0.13 per task”.
+- **Lists that are the claim itself:** “agentic, coding, multimodal, and safety benchmarks”, or “leads all US and European open-weight models”. Every item in such a list is part of the claim.
+- **Named things and the technical idea the item is about:** product nicknames, named frameworks, “recursive self-improvement”.
+- **Design intent:** “built for long-horizon tasks”.
+- **Rankings and significance, as opposed to raw counts:** “one of the most starred repos”, “#1 US open model”.
+
+**Wording:** change a word only when it's jargon, unclear or wrong. Don't swap in synonyms (“compress” stays “compress”, “discuss” stays “discuss”), and don't reorder phrases that already read well.
+
+**Headlines in drafts:** keep the structure the draft has unless it breaks a rule above.
+- Keep words that carry voice, like SHOCKER or CRASH.
+- Keep a podcast's episode hook when the draft has one. Write a new hook only when the draft has none.
+- Keep a company prefix the draft already has (META MUSE GLIMMER, ALIBABA QWEN3.8-MAX). When the parent company isn't obvious from the product name, add it (XIAOMI + MIMO CODE).
+- Lead with the show and episode when the episode is the story (THE ALL-IN PODCAST, ANTHROPIC S-1 SHOCKER). Lead with the guest or topic when they are the story (MATT POCOCK ON AGENT SKILLS).
 
 ## Final check
 
@@ -105,6 +126,7 @@ These are the changes the editor made most often when turning 93 drafts into pub
 - Every pasted link appears once, with the right label, and nothing was added.
 - The date is in the right format and isn't today's date unless the source says so.
 - Every number appears in the source.
+- Nothing that carried the story was cut, and no word was changed without a reason.
 
 ## Examples
 
